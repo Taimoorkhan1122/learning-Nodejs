@@ -11,7 +11,7 @@ const file = new static.Server("./code");
 
 const requestListner = (req, res) => {
   file.serve(req, res);
-  console.log(req.url);
+  console.log("Getting => ", req.url);
   // if (req.url === "/home") {
   //   req
   //     .addListener("end", function () {
@@ -28,8 +28,6 @@ const requestListner = (req, res) => {
   // }
 };
 
-const app = http.createServer(requestListner);
-
-app.listen(port, hostname, () => {
+const app = http.createServer(requestListner).listen(port, hostname, () => {
   console.log(`server is up on PORT: ${port}`);
 });
