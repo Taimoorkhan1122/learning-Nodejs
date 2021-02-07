@@ -7,7 +7,7 @@ const port = 3500;
 // const { URL } = require("url");
 // const myUrl = new URL("/home", "http://localhost:3500");
 
-const file = new static.Server("./code");
+const file = new static.Server("./public");
 
 const requestListner = (req, res) => {
   file.serve(req, res);
